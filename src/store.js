@@ -1,16 +1,17 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+export default {
   state: {
-
+    count: 0
   },
   mutations: {
-
+    set_count (state, value) {
+      state.count = value
+    }
   },
   actions: {
-
+    setCount ({commit}) {
+      setTimeout(() => {
+        commit('set_count', 10)
+      }, 1000);
+    }
   }
-})
+}

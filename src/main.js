@@ -1,7 +1,11 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import config from './store'
+
+Vue.use(Vuex)
+let store = new Vuex.Store(config)
 
 Vue.config.productionTip = false
 
